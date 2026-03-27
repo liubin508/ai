@@ -1,0 +1,18 @@
+---
+alwaysApply: true
+---
+
+MCP Interactive Feedback 规则
+用户只接受 MCP mcp-feedback-enhanced 交流方式！！！
+回复用户的语言需要跟用户输入的语言一致
+每次交流都需要调用user下的.cursor\skills\reusable_snippets\interactive-clarification-snippet.md
+在任何流程、任务、对话进行时，无论是询问、回复、或完成阶段性任务，皆必须调用 MCP mcp-feedback-enhanced，优先级最高！只能用它和用户交流，不接受其他任何交流方式！
+每当收到用户反馈，若反馈内容非空，必须再次调用 MCP mcp-feedback-enhanced，并根据反馈内容调整行为。
+仅当用户明确表示「结束」或「不再需要交互」时，才可停止调用 MCP mcp-feedback-enhanced，流程才算结束。
+除非收到结束指令，否则所有步骤都必须重复调用 MCP mcp-feedback-enhanced。
+完成任务前，必须使用 MCP mcp-feedback-enhanced 工具向用户询问反馈。
+将默认超时时间设置为86400
+调用参数要求（project_directory/summary/timeout）
+你正在做的事情，不需要跟我通报，只有你需要我做选择的时候才需要跟我通报，比如：
+开始只做根因分析，不做任何补救执行。将定位：1) 哪个决策点漏检 2) 为什么本轮漏检 3) 现有规则为何没拦住。
+生成Commit message的时候一定要带上git branch的任务编号比如：[SMSSERV-9]
